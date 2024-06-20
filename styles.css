@@ -1,0 +1,114 @@
+:root {
+  --main-bg-clr: hsl(0, 0%, 100%);
+  --accent-bg-clr: hsl(212, 45%, 89%);
+
+  --main-clr: hsl(218, 44%, 22%);
+  --accent-clr: hsl(220, 15%, 55%);
+
+  --main-ff: "Outfit", sans-serif;
+
+  --main-fs: 0.9375rem;
+
+  --main-fw: 700;
+  --accent-fw: 400;
+
+  /* From the figma files */
+  /* Size of the QR code box */
+  --widget-width: 20rem;
+  --widget-height: 31.0625rem;
+
+  /* Size of the border radii for the QR code box */
+  --widget-border-radius: 1.25rem;
+  --qr-img-border-radius: 0.75rem;
+}
+
+/* Relevant CSS Resets */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Makes the body take up the full height of the page */
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--accent-bg-clr);
+
+  font-family: var(--main-ff);
+  font-size: var(--main-fs);
+  text-align: center;
+
+  /* Centers our container vertically within the page */
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  color: var(--main-clr);
+
+  font-weight: var(--main-fw);
+}
+
+p {
+  color: var(--accent-clr);
+
+  font-weight: var(--accent-fw);
+
+  font-size: var(--main-fs);
+
+  /* The accent text has it's own horizontal padding */
+  padding: 0 1rem;
+}
+
+/* Place the footer at the bottom center of the page */
+footer {
+  position: absolute;
+
+  width: 100%;
+
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container {
+  background-color: var(--main-bg-clr);
+
+  max-width: var(--widget-width);
+  height: var(--widget-height);
+
+  border-radius: var(--widget-border-radius);
+
+  /* Centers our container horizontally within the page */
+  margin: 0 auto;
+
+  padding: 1rem;
+}
+
+/* Provides consistent margins between the items inside the card */
+.items {
+  display: grid;
+  gap: 1rem;
+}
+
+.qr-code {
+  border-radius: var(--qr-img-border-radius);
+}
+
+/* Copied from the initial html file */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
